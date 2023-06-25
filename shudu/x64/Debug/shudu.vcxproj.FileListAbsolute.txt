@@ -1,0 +1,2 @@
+D:\soft\shudu\shudu\x64\Debug\shudu.exe
+D:\soft\shudu\shudu\x64\Debug\shudu.pdb
