@@ -1,18 +1,22 @@
 #pragma once
 #include <string.h>
+#include <vector>
+
+using namespace std;
 
 enum DIFFICULTY{EASY, MIDDLE, HARD};
 
 class Sudoku
 {
 private:
-	int final_num = 0;
+	int final_num = 8;
 	char* game_path = nullptr;
 	int game_num = 0;
 	int difficulty = EASY;
 	int blank_num = 20;
 	bool need_unique = false;
 public:
+	Sudoku(){}
 	Sudoku(int final_num, char *game_path, int game_num, int difficulty, int blank_num, bool need_unique) {
 		this->final_num = final_num;
 		if (game_path != nullptr) {
@@ -32,7 +36,9 @@ public:
 		}
 	}
 
-	void generate_finales() const{}
+	void generate_finales() const;
+
+	char* int_array2char_array(int *array) const;
 
 	void solve_games() const{}
 

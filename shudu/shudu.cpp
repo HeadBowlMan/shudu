@@ -2,9 +2,12 @@
 //
 
 #include <iostream>
+#include "sudoku.h"
 
 int main()
 {
+    Sudoku sudo;
+    sudo.generate_finales();
     std::cout << "Hello World!\n";
 }
 
