@@ -73,8 +73,6 @@ void Sudoku::generate_finales() const
 							outfile << boards[i];
 						}
 
-						cout << "Finales generation completed." << endl;
-
 						delete[]boards;
 						delete[]finales;
 						for (int i = 0; i < 9; i++)
@@ -276,9 +274,25 @@ bool get_next_nonblank(char** board, int& row, int& col, int difficulty, bool** 
 	random_device rd;
 	mt19937 engine(rd());
 	uniform_int_distribution<int> distribution(0, 8);
+	bool all_true = true;
 	switch (difficulty)
 	{
 	case EASY:
+		for (int i = 0; i < 9; i++)
+		{
+			for (int j = 0; j < 9; j++)
+			{
+				if (!skip_place[i][j])
+				{
+					all_true = false;
+					break;
+				}
+			}
+		}
+		if (all_true)
+		{
+			break;
+		}
 		while (true)
 		{
 			row = distribution(engine);
@@ -398,6 +412,7 @@ void Sudoku::generate_games() const
 		}
 		read_board(infile, finales[i]);
 	}
+	infile.close();
 	bool** skip_place = new bool* [9];
 	for (int i = 0; i < 9; i++)
 	{
@@ -418,8 +433,28 @@ void Sudoku::generate_games() const
 			int row, col;
 			if (!get_next_nonblank(finales[i], row, col, difficulty, skip_place))
 			{
-				cerr << "Get next nonblank failed." << endl;
-				return;
+				// cerr << "Get next nonblank failed." << endl;
+
+				generate_finales();
+				ifstream infile("finales.txt");
+				if (!infile) {
+					std::cerr << "Failed to open finales file" << endl;
+					return;
+				}
+				for (int t = i; t < final_num; t++)
+				{
+					read_board(infile, finales[t]);
+				}
+				infile.close();
+				for (int r = 0; r < 9; r++)
+				{
+					for (int c = 0; c < 9; c++)
+					{
+						skip_place[r][c] = false;
+					}
+				}
+				cur_blanks = 0;
+				continue;
 			}
 			char no_str = finales[i][row][col];
 			finales[i][row][col] = '$';
@@ -443,12 +478,13 @@ void Sudoku::generate_games() const
 				find_solutions(board, solution_num);
 				if (solution_num >= 2)
 				{
-					cout << "not unique" << endl;
+					// cout << "not unique" << endl;
 					finales[i][row][col] = no_str;
 					cur_blanks--;
 				}
 			}
 		}
+		// cout << i << endl;
 	}
 
 	ofstream outfile(game_path);

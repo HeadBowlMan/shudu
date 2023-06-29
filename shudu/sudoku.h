@@ -4,7 +4,7 @@
 
 using namespace std;
 
-enum DIFFICULTY{EASY, MIDDLE, HARD};
+enum DIFFICULTY{EASY=1, MIDDLE, HARD};
 
 class Sudoku
 {
