@@ -11,7 +11,7 @@ class Sudoku
 private:
 	int final_num = 8;
 	char* game_path = nullptr;
-	int game_num = 0;
+	int game_num = 8;
 	int difficulty = EASY;
 	int blank_num = 20;
 	bool need_unique = false;
@@ -40,8 +40,8 @@ public:
 
 	char* int_array2char_array(int *array) const;
 
-	void solve_games() const{}
+	void solve_games() const;
 
-	void generate_games() const{}
+	void generate_games() const;
 
 };

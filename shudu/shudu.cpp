@@ -6,8 +6,9 @@
 
 int main()
 {
-    Sudoku sudo;
-    sudo.generate_finales();
+    char test[] = { "game.txt" };
+    Sudoku sudo(8, test, 8, MIDDLE, 55, true);
+    sudo.generate_games();
     std::cout << "Hello World!\n";
 }
 
