@@ -23,7 +23,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="sudoku.h">
+    <ClInclude Include="sudoku\sudoku.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sudoku\utils.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

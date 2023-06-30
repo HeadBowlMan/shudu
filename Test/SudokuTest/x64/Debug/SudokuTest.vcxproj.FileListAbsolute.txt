@@ -1,0 +1,1 @@
+D:\soft\shudu\SudokuTest\x64\Debug\SudokuTest.vcxproj.CopyComplete

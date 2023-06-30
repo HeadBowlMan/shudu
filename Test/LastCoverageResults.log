@@ -1,0 +1,21 @@
+[2023-06-30 15:13:57] [info] Start Program:
+Path:"D:\\soft\\shudu\\x64\\Debug\\SudokuTest.exe"
+Arguments:
+Working directory: "D:\\soft\\shudu\\"
+Modules: Selected: D:\soft\shudu\x64\Debug\shudu.exe D:\soft\shudu\x64\Debug\SudokuTest.exe Excluded: 
+Sources: Selected: D:\soft\shudu D:\soft\shudu\SudokuTest Excluded: test.cpp packages 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: binary C:\Users\lenovo\AppData\Local\Temp\px3e31vb.4ks 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2023-06-30 15:13:57] [info] Module: D:\soft\shudu\x64\Debug\SudokuTest.exe is selected because it matches selected pattern: D:\soft\shudu\x64\Debug\SudokuTest.exe
+[2023-06-30 15:14:34] [info] ----------------------------------------------------
+[2023-06-30 15:14:34] [info] Coverage binary generated in file: C:\Users\lenovo\AppData\Local\Temp\px3e31vb.4ks
+[2023-06-30 15:14:34] [info] ----------------------------------------------------

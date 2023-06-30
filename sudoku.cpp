@@ -31,7 +31,7 @@ void Sudoku::generate_finales() const {
     for (int i = 0; i < 9; i++) {
         temp[i] = new int[9];
     }
-    int* finales = new int[81 * final_num];
+    int* finales = new int[81 * (long long)final_num];
     do {
         for (int i = 0; i < 9; i++) {
             temp[0][i] = first_line[i];
@@ -80,7 +80,7 @@ void Sudoku::generate_finales() const {
 }
 
 char* Sudoku::int_array2char_array(int* array) const {
-    char* write_data = new char[81 * 3 * final_num];
+    char* write_data = new char[81 * 3 * (long long)final_num];
     int idx = 0;
     for (int i = 0; i < final_num; i++) {
         for (int j = 0; j < 81; j++) {
@@ -359,7 +359,7 @@ void Sudoku::generate_games() const {
     for (int i = 0; i < 9; i++) {
         skip_place[i] = new bool[9];
     }
-    for (int i = 0; i < game_num; i++) {
+    for (int i = 0; i < final_num; i++) {
         int cur_blanks = 0;
         for (int r = 0; r < 9; r++) {
             for (int c = 0; c < 9; c++) {

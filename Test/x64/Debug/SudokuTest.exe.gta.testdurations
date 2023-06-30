@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GtaTestDurations xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Executable>D:\soft\shudu\x64\Debug\SudokuTest.exe</Executable>
+  <TestDurations>
+    <TestDuration Test="TestCaseName.TestName" Duration="1" />
+    <TestDuration Test="test_int_array_to_char_array.test_convert" Duration="1" />
+    <TestDuration Test="test_is_legal.check" Duration="1" />
+    <TestDuration Test="test_find_unassigned.get_blank" Duration="1" />
+    <TestDuration Test="test_get_next_nonblank.get_nonblank" Duration="2" />
+    <TestDuration Test="test_generate_finales.generate_finales" Duration="22903" />
+    <TestDuration Test="test_generate_finales.generate_max_finales" Duration="23173" />
+    <TestDuration Test="test_solve.solve_game" Duration="4" />
+    <TestDuration Test="test_find_solutions.check_if_unique" Duration="7" />
+    <TestDuration Test="test_generate_games.check_blank_num" Duration="844" />
+    <TestDuration Test="test_generate_games.check_unique" Duration="61" />
+    <TestDuration Test="test_generate_games.check_max_num" Duration="7979" />
+  </TestDurations>
+</GtaTestDurations>

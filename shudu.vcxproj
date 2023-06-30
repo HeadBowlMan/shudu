@@ -143,7 +143,8 @@
     <ClCompile Include="sudoku.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="sudoku.h" />
+    <ClInclude Include="sudoku\sudoku.h" />
+    <ClInclude Include="sudoku\utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
